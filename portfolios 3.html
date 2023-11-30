@@ -1,0 +1,1018 @@
+ <!-----META SECTION----->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Portfolio Website Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <script src="https://kit.fontawesome.com/6140d5223c.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+/*****COMMON CSS SECTION*****/
+  * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-outline: 0;
+	font-family Roboto, sans-serif, arial;
+}
+html, body 
+	{
+	font-size: 14px;
+	font-weight: 400;
+	background: #000000;
+	color: #fff;
+}
+.container {
+	width: 900px;
+	margin: 0px auto;
+	display: table;
+}
+.width-33 {
+	width: 33%;
+	float: left;
+}
+.width-66 {
+	width: 66%;
+	float: left;
+
+}
+.smoke {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.smoke ul {
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items: center;  
+    text-align: center;  
+}
+
+.smoke ul li {
+    list-style:none;
+    font-weight:bold;
+    letter-spacing:10px;
+    filter:blur(1px);
+    color:#fff;
+    font-size:6em;
+    display: inline-block; 
+}
+.smoke ul:hover li {
+    animation: smoke 2s linear forwards;
+}
+@keyframes smoke {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+        opacity: 1;
+        filter:blur(1px);
+    }
+    100% {
+      transform: rotate(45deg) translateY(-200px);
+        opacity: 0;
+        filter:blur(20px);
+    }
+}
+
+} 
+.smoke ul li:nth-child(1){
+    align-items: center;
+    display: flex;
+    animation-delay:0s;
+    width: 1.5em; 
+    margin-right: 20px;
+}
+.smoke ul li:nth-child(2){
+    animation-delay:.4s
+}
+.smoke ul li:nth-child(3){
+    animation-delay:.8s
+}
+.smoke ul li:nth-child(4){
+    animation-delay:1.2s
+}
+.smoke ul li:nth-child(5){
+    animation-delay:1.6s
+}
+.smoke ul li:nth-child(6){
+    animation-delay:2s
+}
+.smoke ul li:nth-child(7){
+    animation-delay:2.4s
+}
+.smoke ul li:nth-child(8){
+    animation-delay:2.8s
+}
+.smoke ul li:nth-child(9){
+    animation-delay:3.2s
+}
+.smoke ul li:nth-child(10){
+    animation-delay:3.6s
+}
+.smoke ul li:nth-child(11){
+    animation-delay:4s
+}
+.smoke ul li:nth-child(12){
+    animation-delay:4.4s
+}
+.smoke ul li:nth-child(13){
+    animation-delay:4.8s
+}
+.smoke ul li:nth-child(14){
+    animation-delay:5.2s
+}
+/******** Extra *************/
+.smoke.thankyou {
+    width: 100%;
+}
+.thankyousec {
+    height: 0;
+    opacity: 0;
+    transition: opacity 1s; 
+}
+.thankyou .thankyousec {
+    opacity: 1;
+    height: auto;
+}
+.smoke.thankyou > ul {
+    display: none;
+}
+.thankyousec  h1 {
+    color: #fff;
+    font-size: 65px;
+    margin: 0;
+    line-height: 75px;
+}
+.thankyousec  span {
+    color: #fff;
+    font-size: 30px;
+}
+.colmun-grid {
+    display: grid;
+    grid-template-columns: 150px auto;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center; 
+}
+.logo-stack > img {
+    width: 100%;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/*****MENU SECTION*****/
+.main-panel {
+	width: 100%;
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	height: 70vh;
+}
+
+.logo {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.span-col {
+	color: #ff3561;
+}
+
+nav {
+	float: right;
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	margin-left: 20px;
+	color: white;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.menu li {
+    padding: 0px 20px;
+}
+
+.menu li a {
+    color: gray;
+    cursor: pointer;
+}
+
+.menu li a:hover {
+    color: #fff;
+}
+
+/*****Main BANNER*****/
+.width-50 {
+	float: left;
+	width: 50%;
+}
+.banner-section {
+	width: 100%;
+	float: left;
+	margin-top: 25vh;
+}
+.banner-section h1 {
+	font-size: 48px;
+	margin-top: 10px;
+	font-weight: bolder;
+}
+.banner-section h2 {
+	font-size: 20px;
+	line-height: 25px;
+	margin-top: 10px;
+	font-weight: 400;
+}
+.banner-section a {
+	float: left;
+	text-decoration: none;
+	font-size: 18px;
+	margin-top: 20px;
+	border-radius: 50%;
+	text-align: center;
+	border: 2px solid#ff3561;
+	color: #ff3561;
+	margin-left: 10px;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+}
+/*****Main BANNER IMAGE*****/
+.main-panel img {
+	margin-top: 10%;
+	width: 100%;
+	margin-left: 10%;
+
+	color: #ffbf35;
+	margin-left: 10px;
+	border-radius: 40%;
+
+}
+
+
+/*ABOUT US SECTION*/
+.main-section {
+	width: 100%;
+	float: center;
+	padding: 110px 0px 110px 0px;
+}
+.width-100 {
+	width: 100%;
+	float: left;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.heading-text {
+	width: 100%;
+	float: left;
+	font-size: 35px;
+	text-align: center;
+	margin-bottom: 50px;
+	color: #ff3561;
+}
+.about-img {
+	width: 100%;
+	padding: 0px 50px;
+	margin-top: 30px;
+	border-radius: 50%;
+}
+.about-us {
+	width: 100%;
+	float: left;
+	padding: 20px;
+}
+.about-us p {
+	font-size: 16px;
+	margin-top: 25px;
+	line-height: 27px;
+}
+table {
+	width: 100%;
+}
+table th,
+table td {
+	font-size: 14px;
+	text-align: left;
+	padding: 0px px;
+}
+/*****SKILL SECTION*****/
+.skill {
+	margin-top: 30px;
+	font-size: 17px;
+}
+
+.skill span {
+	float: right;
+}
+
+.skill div {
+	width: 100%;
+	float: left;
+	margin-top: 5px;
+	background: #e7e7e7;
+	border-radius: 10px;
+}
+
+.skill div span {
+	background: #ffbf35;
+	height: 5px;
+	float: left;
+}
+
+div[role="progressbar"] {
+	color: #ffbf35;
+	margin-left: 100px;
+	margin-bottom: 20px;
+	width: 100px;
+	;
+	height: 100px;
+	;
+	border-radius: 50%;
+
+	place-items: center;
+	display: grid;
+
+	--pgPercentage: var(--value);
+	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
+		conic-gradient(#ffbf35 calc(var(--pgPercentage) * 1%), #ffe6af 0);
+
+}
+/*****EXPERIENCE SECTION*****/
+.bg-lightgrey {
+	background-color: #1a1a1a;
+}
+.edu-exp {
+	padding: 10px 0px;
+	width: 48%;
+	margin: 1%;
+	float: left;
+	padding-left: 10px;
+}
+.experience-list {
+	width: 100%;
+	float: left;
+	padding: 30px 10px;
+	background: #262626;
+	margin-bottom: 20px;
+}
+.experience-content {
+	width: 100%;
+	float: left;
+	margin-left: 10px;
+}
+.experience-content h2 {
+
+	font-weight: 600;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.experience-content h3 {
+	color: #ffbf35;
+	font-weight: 500;
+	margin-bottom: 2px;
+	font-size: 17px;
+}
+.experience-content p {
+	font-size: 15px;
+}
+/*SERVICE SECTION*/
+.service-list {
+	padding: 40px;
+	margin-top: 35px;
+	background: #262626;
+	border-radius: 15px;
+	width: 94%;
+	float: left;
+}
+
+.service-list i {
+	font-size: 50px;
+	color: #ffbf35;
+	width: 70px;
+	float: left;
+}
+
+.service-list h3 {
+	font-size: 28px;
+	margin-top: 8px;
+	margin-bottom: 15px;
+}
+
+.service-list p {
+	font-size: 15px;
+	line-height: 25px;
+}
+/*****TESTIMONIAL SECTION*****/
+.testimonial {
+	width: 32%;
+	float: left;
+	margin-right: 1%;
+	margin-top: 50px;
+}
+
+.testimonial-content {
+	background: #262626;
+	color: #cfcfcf;
+	width: 100%;
+	float: left;
+	padding: 0px 20px 20px 20px;
+	font-size: 16px;
+	line-height: 28px;
+	position: relative;
+	text-align: center
+}
+
+.testimonial i {
+	color: #ffbf35;
+	font-size: 35px;
+	margin-top: 60px;
+}
+
+.testimonial-img {
+	width: 100%;
+	float: left;
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	top: -35px;
+}
+
+.testimonial-img img {
+	width: 80px;
+	height: 80px;
+	border: 3px solid white;
+	border-radius: 50%;
+}
+
+.testimonial-name {
+	width: 100%;
+	float: left;
+}
+
+.testimonial-name h5 {
+	color: #ffbf35;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.testimonial-name p {
+	font-size: 16px;
+}
+/*PORTFOLIO SECTION*/
+.gallery {
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+}
+.gallery img {
+	height: auto;
+	width: 95%;
+	margin-bottom: 20px;
+}
+/*CONTACT US SECTION*/
+.contact form {
+	width: 66%;
+	margin: 0px auto;
+}
+.contact input,
+textarea {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #a1a1a1;
+}
+.contact textarea {
+	height: 80px;
+}
+.contact button {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	background: #ffbf35;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+}
+.contact h3 {
+	font-size: 26px;
+	text-align: center;
+	margin-top: 60px;
+	color: #ffbf35;
+}
+.contact h4 {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 10px;
+}
+.contact p {
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+}
+/*****FOOTER SECTION*****/
+.footer {
+	background-color: #202020;
+	padding: 30px 0px 40px 0px;
+	width: 100%;
+	float: left;
+}
+.footer-sect {
+	color: #b3b3b3;
+}
+.footer-sect a {
+	color: #b3b3b3;
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+}
+.social-icon a i {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #cdcdcd;
+	line-height: 50px;
+	font-size: 20px;
+	border-radius: 50%;
+}
+</style>
+<body>
+  <!-----MENU SECTION------>
+  <div class="main-panel">
+    <div class="container">
+      <div class="width-33 logo">Port <span class="span-col">folio</span>
+      </div>
+      <div class="width-66">
+        <nav>
+        <ul class="menu">
+         <li><a href="#about_section">About</a></li>
+           <li>
+           <a href="#skills_section">Skills</a>
+               </li>
+          <li><a href="#portfolio_section">Portfolio</a></li>
+          <li><a href="#contact_section">Contact</a></li>
+         <li><a href="/portfolio3/projectshivam/project.html">Project</a></li>
+        <li>        <a class="nav-link" href="/portfolio3/friends/SHIVAM's RESUME.pdf">Resume<span class="sr-only"></span></a></li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  <!------MAIN BANNERR------>
+<div class="container ">
+  <div class="width-50">
+    <div class="banner-section">
+      <span class="span-col">Welcome To SSSA.com</span>
+      <h1>I'M<br><span class="animate">Shivam Kumar</span>
+      </h1>
+      
+      <h2>- Ia passionate Web designer from India.</h2>
+      <a href="https://www.facebook.com/shivamkumarshrivastava.shrivastava.5?mibextid=ZbWKwL">
+      <i class="fa fa-facebook"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/shivam-kumar-03141017b">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="https://instagram.com/shivamkumarshrivastavas?igshid=M2RkZGJiMzhjOQ==">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a href="https://github.com/shivamkumar5052/Portfolio1">
+        <i class="fa fa-github"></i>
+      </a>
+    </div>
+  </div>
+  <div class="width-50" >
+    
+    <img src="/portfolio3/friends/shivam 1.png">
+  </div>
+</div>
+
+</div><br>
+<!------Smoke Animation SECTION------>
+   <div class="smoke" >
+        <ul>
+            <li>W</li>
+            <li>e</li>
+            <li>b</li>
+            <li>-</li>
+            <li>D</li>
+            <li>e</li>
+            <li>v</li>
+            <li>e</li>
+            <li>l</li>
+            <li>o</li>
+            <li>p</li>
+            <li>e</li>
+            <li>r</li>
+            
+        </ul> 
+        <div class="thankyousec">
+            <div class="colmun-grid">
+                
+             </div>     
+        </div>   
+    </div>
+    
+<!------ABOUT US SECTION------>
+<section id="about_section" class="container">
+<div class="main-section bg-lightgrey">
+  <div class="container">
+    <div class="width-50">
+      
+      <img src="/portfolio3/friends/shivam2.png" class="about-img">
+      
+    </div>
+    <div class="width-50">
+      <div class="about-us">
+        <h2 class="heading-text">About Us</h2>
+        <h3>I am available for Web Design Project</h3>
+        <p>Greetings, I’m Shivam Kumar . I’m a student living in Hajipur ,Bihar. I am a fan of entrepreneurship, innovation, and education. I’m also interested in programming and web development..</p>
+        <div class="width-60 mt-20">
+          <table cellspacing="10" cellpadding="8">
+            <tr>
+              <th>Name:</th>
+              <td>Shivam Kumar</td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+     <td>shivamkumar5052@gmail.com</td>
+            </tr>
+            <tr>
+              <th>Birthday:</th>
+              <td> 19 April, 2002</td>
+            </tr>
+            <tr>
+              <th>Study:</th>
+              <td> Patna 07 </td>
+            </tr>
+          </table>
+        </div>
+        <div class="width-80 mt-20">
+          <table cellspacing="10" cellpadding="10">
+            <tr>
+              <th>Phone:</th>
+              <td>6203326606</td>
+            </tr>
+            <tr>
+              <th>City:</th>
+              <td>Bihar, India</td>
+            </tr>
+            <tr>
+              <th>Freelancer:</th>
+              <td> Available</td>
+            </tr>
+            <tr>
+              <th>Website:</th>
+              <td> www.SSSA.com</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!------SKILL SECTION------>
+ <section id="skills_section" class="container">
+<div class="main-section">
+  <div class="container">
+    <h2 class="heading-text">My Skills</h2>
+    <div class="width-50">
+      <div class="skill">
+        <b>HTML</b>
+        <span>85%</span>
+        <div>
+          <span style="width:95%"></span>
+        </div>
+      </div>
+      <div class="skill">
+        <b>CSS</b>
+        <span>85%</span>
+        <div>
+          <span style="width:91%"></span>
+        </div>
+      </div>
+      <div class="skill">
+        <b>Bootstrap</b>
+        <span>75%</span>
+        <div>
+          <span style="width:85%"></span>
+        </div>
+      </div>
+      <div class="skill">
+        <b>java</b>
+        <span>65%</span>
+        <div>
+          <span style="width:79%"></span>
+        </div>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="width-50">
+        <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--value:85">Html-65</div>
+      </div>
+      <div class="width-50">
+        <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--value:85">CSS-85</div>
+      </div>
+      <div class="width-50">
+        <div role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="--value:75">Bootstrap-75</div>
+      </div>
+      <div class="width-50">
+        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">Java-65</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!------EXPERIENCE SECTION------>
+
+<div class="main-section bg-lightgrey">
+  <div class="container">
+    <div class="edu-exp">
+      <h2 class="heading-text">Education</h2>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>Rn.College</h2>
+          <h3>2020-2023</h3>
+          <p>Bachelor in Mathematics </p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+         <div class>
+          <h2>Rn.College</h2>
+          <h3>2018-2020</h3>
+          <p>Intermediate </p>
+          </div>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>Sujadeo Memorial School, CBSE</h2>
+          <h3>2017-2018</h3>
+          <p>Bachelor in Computer Engineering</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>Patna 07</h2>
+          <h3>2023-2025</h3>
+          <p>Polytechnic in Computer Engineering</p>
+        </div>
+      </div>
+    </div>
+    <div class="edu-exp">
+      <h2 class="heading-text">Experience</h2>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>Typing Buzz</h2>
+          <h3>2023-current</h3>
+          <p>CTO</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>Flipkart</h2>
+          <h3>2021-2023(Current)</h3>
+          <p>HR</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>DRM Office</h2>
+          <h3>2020-2021</h3>
+          <p>Data Entry Operator</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>ICICI BPO</h2>
+          <h3>2021-2022</h3>
+          <p>Executive officer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!------SERVICE SECTION------>
+<div class="main-section">
+  <div class="container">
+    <h2 class="heading-text">My Service</h2>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-chrome"></i>
+        <h3>Web Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing portfolio student website</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-instagram"></i>
+        <h3>Web Design</h3>
+        <p>Lorem ipsum dolor sit amet, student graphic design portfolio websites euismod</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-reddit"></i>
+        <h3>Creative Design</h3>
+        <p>Website, Google Form,and Test -Series</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-video-camera"></i>
+        <h3>Video Editing</h3>
+        <p>Video Animation, consectetuer adipiscing elitsed nonummy nibh euismod</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-camera"></i>
+        <h3>Photography</h3>
+        <p>3D-Photo for students adipiscing elitsed nonummy nibh euismod</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-book"></i>
+        <h3>Test Series</h3>
+        <p>Test Seriesfor students adipiscing elitsed nonummy nibh euismod</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!------TESTIMONIAL SECTION------>
+<div class="main-section bg-lightgrey">
+  <div class="container">
+    <h2 class="heading-text">What Client Say's </h2>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <div class="testimonial-img">
+          <img src="/portfolio3/friends/IMG_20231126_122138.jpg">
+        </div>
+        <i class="fa fa-quote-left"></i>
+        <p> Contrary to popular belief, I will provide free portfolio website templates..</p>
+        <div class="testimonial-name">
+          <h5>Shubham</h5>
+          <p>Data Analysis</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <div class="testimonial-img">
+          <img src="/portfolio3/friends/IMG_20231126_122109.jpg">
+        </div>
+        <i class="fa fa-quote-left"></i>
+        <p> Contrary to popular belief, I will provide free portfolio website templates.</p>
+        <div class="testimonial-name">
+          <h5>Mayank</h5>
+          <p>Data Analysis</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <div class="testimonial-img">
+          <img src="/portfolio3/friends/IMG_20231126_122151.jpg">
+        </div>
+        <i class="fa fa-quote-left"></i>
+        <p> Contrary to popular belief, I will provide free portfolio website templates.</p>
+        <div class="testimonial-name">
+          <h5>Prabhat</h5>
+          <p>Data Analysis</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!------PORTFOLIO SECTION------>
+<section id="portfolio_section" class="container">
+<div class="main-section">
+  <div class="container">
+    <h2 class="heading-text">My Portfolio</h2>
+    <div class="gallery">
+      <div class="width-33">
+       <a href="/portfolio3/friends/IMG20230802134340.jpg" target="_blank">
+        <img src="/portfolio3/friends/IMG20230802134340.jpg">
+       </a>
+      </div>
+      <div class="width-33">
+        <a href="/portfolio3/friends/IMG20230802134314.jpg" target="_blank">
+        <img src="/portfolio3/friends/IMG20230802134314.jpg">
+        </a>
+      </div>
+            <div class="width-33">
+          <a href="/portfolio3/friends/IMG20230614131553.jpg" target="_blank">
+        <img src="/portfolio3/friends/IMG20230614131553.jpg">
+          </a>
+      </div>
+      <div class="width-33">
+      <a href="/portfolio3/friends/IMG20230916065242.jpg" target="_blank">
+        <img src="/portfolio3/friends/IMG20230916065242.jpg">
+      </a>
+      </div>
+      
+      <div class="width-33">
+           <a href="/portfolio3/friends/IMG20230917102407.jpg" target="_blank">
+        <img src="/portfolio3/friends/IMG20230917102407.jpg">
+           </a>
+      </div>
+      <div class="width-33">
+    <a href="/portfolio3/friends/IMG20230916065242.jpg" target="_blank">
+        <img src="/portfolio3/friends/IMG20230916065242.jpg">
+    </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+<!-------------CONTACT US SECTION----------------------->
+<section id="contact_section" class="container">
+<div class="main-section contact bg-lightgrey">
+  <div class="container">
+    <h2 class="heading-text">Get In Touch</h2>
+    <div class="width-100">
+      <form>
+        <input type="text" placeholder="Full Name...">
+        <input type="text" placeholder="Full Email Id...">
+        <input type="text" placeholder="Full Mobile No...">
+        <textarea placeholder="Enter Address..."></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="width-33">
+      <h3>
+        <i class="fa fa-map-marker"></i>
+      </h3>
+      <h4>Address</h4>
+      <p>Gandhi Ashram,Hajipur, Vaishali,844101</p>
+    </div>
+    <div class="width-33">
+      <h3>
+        <i class="fa fa-phone"></i>
+      </h3>
+      <h4>Phone</h4>
+      <p>+916203326606</p>
+    </div>
+    <div class="width-33">
+      <h3>
+        <i class="fa fa-envelope-o"></i>
+      </h3>
+      <h4>Email</h4>
+      <p>shivamsupport@5052.com</p>
+    </div>
+  </div>
+</div>
+</section>
+<!------FOOTER SECTION------>
+
+<div class="footer">
+  <div class="container">
+    <div class="footer-sect social-icon width-50">
+      <a href="https://www.facebook.com/shivamkumarshrivastava.shrivastava.5?mibextid=ZbWKwL">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/shivam-kumar-03141017b">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="https://instagram.com/shivamkumarshrivastavas?igshid=M2RkZGJiMzhjOQ==">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+    <div class="footer-sect mt-20 width-50">CopyRight © 2023 Dezven.com Website Template. All Rights Reserved</div>
+  </div>
+</div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        let typed = new Typed('.animate', {
+            strings: [
+                "Shivam Kumar",
+            ],
+            typeSpeed: 100,
+            backSpeed: 80,
+            loop: true
+        });
+    </script>
+</html>
